@@ -96,8 +96,18 @@ playStopBtn.addEventListener('click',function(){
 
 //Top 버튼
 const toTop = document.querySelector('.goTop');
+const section2 = document.querySelector('.section2');
+
+window.addEventListener('scroll', function(){
+  if(this.window.scrollY > section2.offsetTop){
+    toTop.style.height = "60px";
+  } else {
+    toTop.style.height = "0";
+  }
+})
 
 
+/*
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -107,6 +117,7 @@ function scrollFunction() {
     toTop.style.display = "none";
   }
 }
+*/
 
 toTop.addEventListener('click',function(e){
   e.preventDefault();
